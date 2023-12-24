@@ -20,6 +20,7 @@ function base64_encode(img) {
 
 // DATA OBJECT (Moved outside the invoicePdf function for reusability)
 let data = {
+    // ... (your existing data object)
     //"documentTitle": "RECEIPT", //Defaults to INVOICE
     "currency": "EUR",
     "taxNotation": "vat", //or gst
