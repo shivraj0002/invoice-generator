@@ -20,7 +20,38 @@ function base64_encode(img) {
 
 // DATA OBJECT (Moved outside the invoicePdf function for reusability)
 let data = {
-    // ... (your existing data object)
+    //"documentTitle": "RECEIPT", //Defaults to INVOICE
+    "currency": "EUR",
+    "taxNotation": "vat", //or gst
+    "marginTop": 25,
+    "marginRight": 25,
+    "marginLeft": 25,
+    "marginBottom": 25,
+    "logo": `${base64_encode(imgPath)}`, //or base64
+    //"logoExtension": "png", //only when logo is base64
+    "sender": {
+        "company": "Buy Me A Gradient",
+        "address": "Corso Italia 13",
+        "zip": "1234 AB",
+        "city": "Milan",
+        "country": "IT"
+        //"custom1": "custom value 1",
+        //"custom2": "custom value 2",
+        //"custom3": "custom value 3"
+    },
+    "client": {
+        "company": "Client Corp",
+        "address": "Clientstreet 456",
+        "zip": "4567 CD",
+        "city": "Clientcity",
+        "country": "Clientcountry"
+        //"custom1": "custom value 1",
+        //"custom2": "custom value 2",
+        //"custom3": "custom value 3"
+    },
+    "invoiceNumber": "2020.0001",
+    "invoiceDate": "05-01-2020",
+    "bottomNotice": "Kindly pay your invoice within 15 days."
 };
 
 // INVOICE PDF FUNCTION
